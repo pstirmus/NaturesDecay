@@ -19,6 +19,6 @@ public class Anim : MonoBehaviour
     }
     public void Walk()
     {
-        anim.Play("idle");
+        anim.Play("run");
     }
 }

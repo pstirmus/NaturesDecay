@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-[RequireComponent(typeof(Rigidbody2D),typeof(BoxCollider2D))]
+[RequireComponent(typeof(Rigidbody2D), typeof(BoxCollider2D))]
+[RequireComponent(typeof(skils), typeof(Anim))]
 public class playercontroller : MonoBehaviour
 {
     [SerializeField]
@@ -32,6 +33,7 @@ public class playercontroller : MonoBehaviour
     void FixedUpdate()
     {
         move();
+        Playdash();
     }
     
 
@@ -61,9 +63,7 @@ public class playercontroller : MonoBehaviour
                 Vector2 zıplamaVektor = new Vector2(0, 1) * ziplamaGucu;
                 rb.AddForce(zıplamaVektor);
                 //rb.AddForce(Vector2.up*ziplamaGucu); 
-                ciftzıplayabilir = true;
-                
-                
+                ciftzıplayabilir = true;    
             }
         }
         else if (ciftzıplayabilir == true)
@@ -100,6 +100,13 @@ public class playercontroller : MonoBehaviour
         else
         {
             anim.Idle();
+        }
+    }
+    void Playdash()
+    {
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            skil.dash();
         }
     }
 }

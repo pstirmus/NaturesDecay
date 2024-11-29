@@ -18,12 +18,11 @@ public class skils : MonoBehaviour
     
     public Vector3 mainscharactertransform;
     public GameObject maincharacterscale;
-    void Start()
+    void Awake()
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
         mainscharactertransform = gameObject.transform.position;
         sRenderer = gameObject.GetComponent<SpriteRenderer>();
-        Debug.Log(Input.touchCount);
     }
 
 
@@ -34,6 +33,7 @@ public class skils : MonoBehaviour
 
     IEnumerator dashCorot()
     {
+        Debug.Log("asd");
         canDash = false;
         isDashing = true;
         rb.gravityScale = 0;
