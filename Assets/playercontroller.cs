@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
+[RequireComponent(typeof(Rigidbody2D))]
 public class playercontroller : MonoBehaviour
 {
     [SerializeField]
@@ -21,7 +23,7 @@ public class playercontroller : MonoBehaviour
     void Start()
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
-        anim = gameObject.GetComponent<Animator>();
+        /*anim = gameObject.GetComponent<Animator>();*/
         sRenderer = gameObject.GetComponent<SpriteRenderer>();
     }
 
@@ -31,7 +33,7 @@ public class playercontroller : MonoBehaviour
         transform.Translate(yon * haraketHizi * Time.deltaTime,0,0);
         if (yon!=0)
         {
-            anim.SetBool("kosuyor", true);
+            /*anim.SetBool("kosuyor", true);*/
 
             if (yon > 0)
             {
@@ -43,10 +45,10 @@ public class playercontroller : MonoBehaviour
             }
 
         }
-        else
+        /*else
         {
             anim.SetBool("kosuyor", false);
-        }
+        }*/
         Yonkarar((int)Input.GetAxis("Horizontal1"));
     }
     
