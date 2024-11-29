@@ -58,7 +58,7 @@ public class playercontroller : MonoBehaviour
     }
     public void jump()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.W))
         {
             isjump = true;
             if (ciftzıplayabilir == false)

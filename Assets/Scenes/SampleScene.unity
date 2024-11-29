@@ -424,42 +424,14 @@ PrefabInstance:
       value: Dragon
       objectReference: {fileID: 0}
     - target: {fileID: 3677368081388786021, guid: 69c00ab078ec7e14fa0b17437c789b0b, type: 3}
-      propertyPath: ziplamaGucu
-      value: 150
+      propertyPath: raydistance
+      value: 1.3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 1796612334231283276, guid: 69c00ab078ec7e14fa0b17437c789b0b, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 5013072335386310096}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 69c00ab078ec7e14fa0b17437c789b0b, type: 3}
---- !u!1 &5013072335386310088 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1796612334231283276, guid: 69c00ab078ec7e14fa0b17437c789b0b, type: 3}
-  m_PrefabInstance: {fileID: 5013072335386310087}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &5013072335386310096
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5013072335386310088}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3067204b2d8c9864da157e98534f5b4a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dashAmount: 7
-  dashtime: 0.1
-  HorizontalMove: 7
-  canDash: 1
-  isDashing: 0
-  dashColdown: 0
-  mainscharactertransform: {x: 0, y: 0, z: 0}
-  maincharacterscale: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
