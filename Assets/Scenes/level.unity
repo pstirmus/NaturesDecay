@@ -739,8 +739,13 @@ GameObject:
   - component: {fileID: 1710420553}
   - component: {fileID: 1710420552}
   - component: {fileID: 1710420554}
+<<<<<<< HEAD
   m_Layer: 0
   m_Name: mapbasla
+=======
+  m_Layer: 3
+  m_Name: Tilemap
+>>>>>>> 44bc0cbacb03b872ba201012712325a0d1fc56f1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2234,7 +2239,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -3.5077176, y: -4.1453466}
+  m_Offset: {x: -3.5077176, y: -4.1926184}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -2244,7 +2249,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 11.184562, y: 2.9093056}
+  m_Size: {x: 11.184562, y: 2.8147619}
   m_EdgeRadius: 0
 --- !u!61 &1710420552
 BoxCollider2D:
