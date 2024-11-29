@@ -16,7 +16,7 @@ public class playercontroller : MonoBehaviour
     int yon;
     bool ciftzıplayabilir;
 
-
+    skils skil;
 
     
 
@@ -30,26 +30,7 @@ public class playercontroller : MonoBehaviour
 
     void FixedUpdate()
     {
-        transform.Translate(yon * haraketHizi * Time.deltaTime,0,0);
-        if (yon!=0)
-        {
-            /*anim.SetBool("kosuyor", true);*/
-
-            if (yon > 0)
-            {
-                sRenderer.flipX = false;
-            }
-            else if (yon < 0)
-            {
-                sRenderer.flipX = true;
-            }
-
-        }
-        /*else
-        {
-            anim.SetBool("kosuyor", false);
-        }*/
-        Yonkarar((int)Input.GetAxis("Horizontal1"));
+        move();
     }
     
 
@@ -91,5 +72,32 @@ public class playercontroller : MonoBehaviour
             ciftzıplayabilir = false;
         }
 
+    }
+    void move()
+    {
+        transform.Translate(yon * haraketHizi * Time.deltaTime, 0, 0);
+        yonDegis();
+        /*else
+        {
+            anim.SetBool("kosuyor", false);
+        }*/
+        Yonkarar((int)Input.GetAxis("Horizontal1"));
+    }
+    void yonDegis()
+    {
+        if (yon != 0)
+        {
+            /*anim.SetBool("kosuyor", true);*/
+
+            if (yon > 0)
+            {
+                sRenderer.flipX = false;
+            }
+            else if (yon < 0)
+            {
+                sRenderer.flipX = true;
+            }
+
+        }
     }
 }

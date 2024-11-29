@@ -29,11 +29,10 @@ public class skils : MonoBehaviour
 
     public void dash()
     {
-        StartCoroutine(dashh());
-
+        StartCoroutine(dashCorot());
     }
 
-    IEnumerator dashh()
+    IEnumerator dashCorot()
     {
         canDash = false;
         isDashing = true;
