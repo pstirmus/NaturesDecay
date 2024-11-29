@@ -13,10 +13,10 @@ public class playercontroller : MonoBehaviour
     private float ziplamaGucu;
     private SpriteRenderer sRenderer;
     Rigidbody2D rb;
-    
+    [SerializeField] float raydistance;
     int yon;
-    bool ciftzıplayabilir;
-
+    [SerializeField] bool ciftzıplayabilir;
+    bool isjump;
     skils skil;
     Anim anim;
     
@@ -27,18 +27,21 @@ public class playercontroller : MonoBehaviour
         sRenderer = GetComponent<SpriteRenderer>();
         skil = GetComponent<skils>();
         anim = GetComponent<Anim>();
+        
     }
 
-
+    
     private void Update()
     {
         move();
         Playdash();
         yonDegis();
+        jump();
+        
     }
     public bool YerdeMi()
     {
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, 1.6f, 1 << LayerMask.NameToLayer("Zemin"));
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, raydistance, 1 << LayerMask.NameToLayer("zemin"));
         if (hit.collider != null)
         {
             return true;
@@ -47,7 +50,7 @@ public class playercontroller : MonoBehaviour
         {
             return false;
         }
-
+        
     }
     public void Yonkarar(int yon)
     {
@@ -57,6 +60,7 @@ public class playercontroller : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
+            isjump = true;
             if (ciftzıplayabilir == false)
             {
                 if (YerdeMi())

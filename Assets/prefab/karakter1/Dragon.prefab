@@ -15,6 +15,8 @@ GameObject:
   - component: {fileID: 1083524756074362973}
   - component: {fileID: 5789551032948572535}
   - component: {fileID: 3677368081388786021}
+  - component: {fileID: 8555879654475868848}
+  - component: {fileID: 6752110960434811759}
   m_Layer: 0
   m_Name: Dragon
   m_TagString: Untagged
@@ -210,4 +212,46 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   haraketHizi: 5
-  ziplamaGucu: 5
+  ziplamaGucu: 150
+  raydistance: 0
+  "ciftz\u0131playabilir": 0
+--- !u!114 &8555879654475868848
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1796612334231283276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3067204b2d8c9864da157e98534f5b4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dashAmount: 7
+  dashtime: 0.1
+  HorizontalMove: 7
+  canDash: 1
+  isDashing: 0
+  dashColdown: 0
+  mainscharactertransform: {x: 0, y: 0, z: 0}
+  maincharacterscale: {fileID: 0}
+--- !u!114 &6752110960434811759
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1796612334231283276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3067204b2d8c9864da157e98534f5b4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dashAmount: 7
+  dashtime: 0.1
+  HorizontalMove: 7
+  canDash: 1
+  isDashing: 0
+  dashColdown: 0
+  mainscharactertransform: {x: 0, y: 0, z: 0}
+  maincharacterscale: {fileID: 0}
