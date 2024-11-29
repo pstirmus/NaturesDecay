@@ -30,13 +30,12 @@ public class playercontroller : MonoBehaviour
     }
 
 
-    void FixedUpdate()
+    private void Update()
     {
         move();
         Playdash();
+        yonDegis();
     }
-    
-
     public bool YerdeMi()
     {
         RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, 1.6f, 1 << LayerMask.NameToLayer("Zemin"));
@@ -56,30 +55,30 @@ public class playercontroller : MonoBehaviour
     }
     public void jump()
     {
-        if (ciftzıplayabilir == false)
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            if (YerdeMi())
+            if (ciftzıplayabilir == false)
+            {
+                if (YerdeMi())
+                {
+                    Vector2 zıplamaVektor = new Vector2(0, 1) * ziplamaGucu;
+                    rb.AddForce(zıplamaVektor);
+                    //rb.AddForce(Vector2.up*ziplamaGucu); 
+                    ciftzıplayabilir = true;
+                }
+            }
+            else if (ciftzıplayabilir == true)
             {
                 Vector2 zıplamaVektor = new Vector2(0, 1) * ziplamaGucu;
                 rb.AddForce(zıplamaVektor);
-                //rb.AddForce(Vector2.up*ziplamaGucu); 
-                ciftzıplayabilir = true;    
+                ciftzıplayabilir = false;
             }
         }
-        else if (ciftzıplayabilir == true)
-        {
-            Vector2 zıplamaVektor = new Vector2(0, 1) * ziplamaGucu;
-            rb.AddForce(zıplamaVektor);
-            ciftzıplayabilir = false;
-        }
-
     }
     void move()
     {
-        transform.Translate(yon * haraketHizi * Time.deltaTime, 0, 0);
-        yonDegis();
-       
         Yonkarar((int)Input.GetAxis("Horizontal1"));
+        transform.Translate(yon * haraketHizi * Time.deltaTime, 0, 0);
     }
     void yonDegis()
     {
