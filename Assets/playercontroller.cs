@@ -47,8 +47,7 @@ public class playercontroller : MonoBehaviour
         {
             anim.SetBool("kosuyor", false);
         }
-       // sagsol();
-        
+        Yonkarar((int)Input.GetAxis("Horizontal1"));
     }
     
 
