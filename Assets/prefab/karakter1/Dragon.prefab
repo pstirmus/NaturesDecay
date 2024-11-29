@@ -33,7 +33,7 @@ Transform:
   m_GameObject: {fileID: 1796612334231283276}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.12, y: -1.77, z: 0}
+  m_LocalPosition: {x: -3.2939968, y: -0.4069121, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -213,7 +213,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   haraketHizi: 5
   ziplamaGucu: 150
-  raydistance: 1.3
+  raydistance: 0
   "ciftz\u0131playabilir": 0
 --- !u!114 &8555879654475868848
 MonoBehaviour:
