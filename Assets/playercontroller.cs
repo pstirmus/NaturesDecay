@@ -27,8 +27,8 @@ public class playercontroller : MonoBehaviour
         sRenderer = GetComponent<SpriteRenderer>();
     }
 
-    
-    void Update()
+
+    void FixedUpdate()
     {
         transform.Translate(yon * haraketHizi * Time.deltaTime,0,0);
         if (yon!=0)
