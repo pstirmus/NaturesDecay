@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-[RequireComponent(typeof(Rigidbody2D))]
+[RequireComponent(typeof(Rigidbody2D),typeof(BoxCollider2D))]
 public class playercontroller : MonoBehaviour
 {
     [SerializeField]
@@ -12,7 +12,7 @@ public class playercontroller : MonoBehaviour
     private float ziplamaGucu;
     private SpriteRenderer sRenderer;
     Rigidbody2D rb;
-    Animator anim;
+    /*Animator anim;*/
     int yon;
     bool ciftzıplayabilir;
 
@@ -22,9 +22,9 @@ public class playercontroller : MonoBehaviour
 
     void Start()
     {
-        rb = gameObject.GetComponent<Rigidbody2D>();
+        rb = GetComponent<Rigidbody2D>();
         /*anim = gameObject.GetComponent<Animator>();*/
-        sRenderer = gameObject.GetComponent<SpriteRenderer>();
+        sRenderer = GetComponent<SpriteRenderer>();
     }
 
     
