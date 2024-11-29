@@ -12,19 +12,20 @@ public class playercontroller : MonoBehaviour
     private float ziplamaGucu;
     private SpriteRenderer sRenderer;
     Rigidbody2D rb;
-    /*Animator anim;*/
+    
     int yon;
     bool ciftzıplayabilir;
 
     skils skil;
-
+    Anim anim;
     
 
-    void Start()
+    void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-        /*anim = gameObject.GetComponent<Animator>();*/
         sRenderer = GetComponent<SpriteRenderer>();
+        skil = GetComponent<skils>();
+        anim = GetComponent<Anim>();
     }
 
 
@@ -77,17 +78,14 @@ public class playercontroller : MonoBehaviour
     {
         transform.Translate(yon * haraketHizi * Time.deltaTime, 0, 0);
         yonDegis();
-        /*else
-        {
-            anim.SetBool("kosuyor", false);
-        }*/
+       
         Yonkarar((int)Input.GetAxis("Horizontal1"));
     }
     void yonDegis()
     {
         if (yon != 0)
         {
-            /*anim.SetBool("kosuyor", true);*/
+            anim.Walk();
 
             if (yon > 0)
             {
@@ -98,6 +96,10 @@ public class playercontroller : MonoBehaviour
                 sRenderer.flipX = true;
             }
 
+        }
+        else
+        {
+            anim.Idle();
         }
     }
 }
