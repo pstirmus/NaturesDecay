@@ -46,8 +46,9 @@ public class CameraFollow : MonoBehaviour
         float distance = Vector3.Distance(player1.position, player2.position);
 
         // Kameranýn zoom seviyesini mesafeye göre ayarla
-        float newZoom = Mathf.Lerp(maxZoom, minZoom, distance / zoomLimiter);
+        float newZoom = Mathf.Lerp(minZoom, maxZoom, distance / zoomLimiter);
         cam.orthographicSize = Mathf.Lerp(cam.orthographicSize, newZoom, Time.deltaTime);
     }
+
 }
 

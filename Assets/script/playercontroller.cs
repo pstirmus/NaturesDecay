@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-[RequireComponent(typeof(Rigidbody2D), typeof(BoxCollider2D))]
+[RequireComponent(typeof(Rigidbody2D), typeof(PolygonCollider2D))]
 [RequireComponent(typeof(skils), typeof(Anim))]
 public class playercontroller : MonoBehaviour
 {
@@ -20,7 +20,8 @@ public class playercontroller : MonoBehaviour
     skils skil;
     Anim anim;
     [SerializeField]string haraket;
-    [SerializeField] KeyCode JumpKey;
+    [SerializeField] KeyCode JumpKey,DashKey;
+
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -58,7 +59,7 @@ public class playercontroller : MonoBehaviour
 
     public bool YerdeMi()
     {
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, raydistance, 1 << LayerMask.NameToLayer("zemin"));
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, raydistance, (1 << LayerMask.NameToLayer("zemin")) | (1 << LayerMask.NameToLayer("Player")));
         if (hit.collider != null)
         {
             return true;
@@ -116,7 +117,7 @@ public class playercontroller : MonoBehaviour
     }
     void Playdash()
     {
-        if (Input.GetKeyDown(KeyCode.LeftShift))
+        if (Input.GetKeyDown(DashKey))
         {
             skil.dash();
         }
