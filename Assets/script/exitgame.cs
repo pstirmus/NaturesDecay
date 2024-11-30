@@ -1,12 +1,14 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class exitgame : MonoBehaviour
+public class ExitGame : MonoBehaviour
 {
-   void QuitGame () {
-Application.Quit ();
-Debug.Log("Game is exiting");
-}
-    
+    public void ExitGameOnClick()
+    {
+        Debug.Log("Oyundan Çıkılıyor...");
+        Application.Quit();
+
+        #if UNITY_EDITOR
+            UnityEditor.EditorApplication.isPlaying = false;
+        #endif
+    }
 }
