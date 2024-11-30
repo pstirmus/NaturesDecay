@@ -6,6 +6,7 @@ public class enemyHealt : MonoBehaviour
 {
     [SerializeField] Material material;
     [SerializeField]float newFloatValue;
+    [SerializeField]KeyCode key;
     private void Awake()
     {
         Renderer renderer = gameObject.GetComponent<Renderer>();
@@ -26,7 +27,7 @@ public class enemyHealt : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       if (Input.GetKeyDown(KeyCode.E))
+       if (Input.GetKeyDown(key))
         {
 
             if (newFloatValue >= 1)

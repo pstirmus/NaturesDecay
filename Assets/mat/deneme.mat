@@ -46,6 +46,7 @@ Material:
     m_Ints: []
     m_Floats:
     - _DirtAmount: 100
+    - _Float: 0
     m_Colors: []
   m_BuildTextureStacks: []
 --- !u!114 &6809985677384680452

@@ -8,6 +8,9 @@
         },
         {
             "m_Id": "505751ef6e024a4c9253629e4608327f"
+        },
+        {
+            "m_Id": "beb3153453df4c58b19d0f1dd9cb7074"
         }
     ],
     "m_Keywords": [],
@@ -804,6 +807,9 @@
         },
         {
             "m_Id": "505751ef6e024a4c9253629e4608327f"
+        },
+        {
+            "m_Id": "beb3153453df4c58b19d0f1dd9cb7074"
         }
     ]
 }
@@ -968,8 +974,8 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -1110.0,
-            "y": -291.0000305175781,
+            "x": -1145.0001220703125,
+            "y": -646.0,
             "width": 208.0,
             "height": 435.0
         }
@@ -1130,10 +1136,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -1601.0,
-            "y": 681.0,
+            "x": -1359.0001220703125,
+            "y": 483.0000305175781,
             "width": 135.0,
-            "height": 34.0
+            "height": 34.000030517578128
         }
     },
     "m_Slots": [
@@ -1372,6 +1378,34 @@
         "m_SerializableColors": []
     },
     "m_SerializedDescriptor": "SurfaceDescription.SpriteMask"
+}
+
+{
+    "m_SGVersion": 1,
+    "m_Type": "UnityEditor.ShaderGraph.Internal.Vector1ShaderProperty",
+    "m_ObjectId": "beb3153453df4c58b19d0f1dd9cb7074",
+    "m_Guid": {
+        "m_GuidSerialized": "cf9ce04e-dbdc-4eb3-a2f4-acf3a90c3b02"
+    },
+    "m_Name": "Float",
+    "m_DefaultRefNameVersion": 1,
+    "m_RefNameGeneratedByDisplayName": "Float",
+    "m_DefaultReferenceName": "_Float",
+    "m_OverrideReferenceName": "",
+    "m_GeneratePropertyBlock": true,
+    "m_UseCustomSlotLabel": false,
+    "m_CustomSlotLabel": "",
+    "m_DismissedVersion": 0,
+    "m_Precision": 0,
+    "overrideHLSLDeclaration": false,
+    "hlslDeclarationOverride": 0,
+    "m_Hidden": false,
+    "m_Value": 0.0,
+    "m_FloatType": 0,
+    "m_RangeValues": {
+        "x": 0.0,
+        "y": 1.0
+    }
 }
 
 {
