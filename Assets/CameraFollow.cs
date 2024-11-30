@@ -6,7 +6,7 @@ public class CameraFollow : MonoBehaviour
     public Transform player2; // Ýkinci karakter
     public float smoothTime = 0.3f; // Kamera hareketi için yumuþaklýk
     public float minZoom = 5f; // Minimum zoom
-    public float maxZoom = 7f; // Maksimum zoom
+    public float maxZoom = 15f; // Maksimum zoom
     public float zoomLimiter = 10f; // Zoom hýzý
     public Vector3 offset; // Kameranýn ofseti
 
@@ -50,3 +50,4 @@ public class CameraFollow : MonoBehaviour
         cam.orthographicSize = Mathf.Lerp(cam.orthographicSize, newZoom, Time.deltaTime);
     }
 }
+
