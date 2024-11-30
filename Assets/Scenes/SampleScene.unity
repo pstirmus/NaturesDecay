@@ -310,6 +310,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dragon (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8149445168958768618, guid: 131b05f65483b1f40a4d5d4db4cabe26, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8149445168958768618, guid: 131b05f65483b1f40a4d5d4db4cabe26, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9155675971158185549, guid: 131b05f65483b1f40a4d5d4db4cabe26, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.66
