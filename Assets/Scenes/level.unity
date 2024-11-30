@@ -155,7 +155,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.7523641, y: 0.72200006}
   m_AnchorMax: {x: 0.80318207, y: 0.81100005}
-  m_AnchoredPosition: {x: -1.5000305, y: 0.666687}
+  m_AnchoredPosition: {x: -1.5, y: 0.66796875}
   m_SizeDelta: {x: -3, y: -2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &14141307
@@ -965,7 +965,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.3556356, y: 0.605}
   m_AnchorMax: {x: 0.68200004, y: 0.72200006}
-  m_AnchoredPosition: {x: -27.111115, y: -0.7222214}
+  m_AnchoredPosition: {x: -27.111328, y: -0.72265625}
   m_SizeDelta: {x: -76, y: -5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &890526624
@@ -1113,7 +1113,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -1234,7 +1234,7 @@ PrefabInstance:
     - target: {fileID: 7242248251295109866, guid: ed5de64f8f08fab4e8bc6779e057e244, type: 3}
       propertyPath: player2
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1215583447}
     - target: {fileID: 7242248251295109866, guid: ed5de64f8f08fab4e8bc6779e057e244, type: 3}
       propertyPath: zoomLimiter
       value: 2.81
@@ -1905,6 +1905,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: -0.75, z: 0}
+--- !u!4 &1215583447 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 9155675971158185549, guid: 131b05f65483b1f40a4d5d4db4cabe26, type: 3}
+  m_PrefabInstance: {fileID: 1759978569}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1252932254
 GameObject:
   m_ObjectHideFlags: 0
@@ -2678,7 +2683,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.25618204, y: 0.26638576}
   m_AnchorMax: {x: 0.294, y: 0.32900003}
-  m_AnchoredPosition: {x: 0.6111145, y: -3}
+  m_AnchoredPosition: {x: 0.609375, y: -3}
   m_SizeDelta: {x: -3, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1667221559
@@ -24954,6 +24959,8 @@ PrefabInstance:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 1759978569}
+  - {fileID: 2116643192}
   - {fileID: 291752197}
   - {fileID: 1766031745}
   - {fileID: 1304346374}
@@ -24963,11 +24970,9 @@ SceneRoots:
   - {fileID: 444771781}
   - {fileID: 371531768}
   - {fileID: 940585370}
-  - {fileID: 2116643192}
   - {fileID: 992997554}
   - {fileID: 1142494046}
   - {fileID: 1677812676}
   - {fileID: 706871996}
   - {fileID: 1135497505}
-  - {fileID: 1759978569}
   - {fileID: 931693480}
