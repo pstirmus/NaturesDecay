@@ -25,4 +25,8 @@ public class Anim : MonoBehaviour
     {
         anim.Play("Jump");
     }
+    public void attack()
+    {
+        anim.Play("Jump");
+    }
 }
