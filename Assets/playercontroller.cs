@@ -67,7 +67,6 @@ public class playercontroller : MonoBehaviour
                 {
                     Vector2 zıplamaVektor = new Vector2(0, 1) * ziplamaGucu;
                     rb.AddForce(zıplamaVektor);
-                    //rb.AddForce(Vector2.up*ziplamaGucu); 
                     ciftzıplayabilir = true;
                 }
             }
