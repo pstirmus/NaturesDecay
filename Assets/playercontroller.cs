@@ -19,7 +19,7 @@ public class playercontroller : MonoBehaviour
     bool isjump;
     skils skil;
     Anim anim;
-    
+    [SerializeField]string haraket;
 
     void Awake()
     {
@@ -80,7 +80,7 @@ public class playercontroller : MonoBehaviour
     }
     void move()
     {
-        Yonkarar((int)Input.GetAxis("Horizontal1"));
+        Yonkarar((int)Input.GetAxis(haraket));
         transform.Translate(yon * haraketHizi * Time.deltaTime, 0, 0);
     }
     void yonDegis()

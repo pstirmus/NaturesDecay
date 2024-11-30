@@ -1,18 +1,48 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class CameraFollow : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public Transform player1; // Ýlk karakter
+    public Transform player2; // Ýkinci karakter
+    public float smoothTime = 0.3f; // Kamera hareketi için yumuþaklýk
+    public float minZoom = 5f; // Minimum zoom
+    public float maxZoom = 15f; // Maksimum zoom
+    public float zoomLimiter = 10f; // Zoom hýzý
+    public Vector2 offset; // Kameranýn ofseti
+
+    private Vector3 velocity; // Kamera hýzý
+    private Camera cam; // Kamera referansý
+
     void Start()
     {
-        
+        cam = Camera.main;
     }
 
-    // Update is called once per frame
-    void Update()
+    void LateUpdate()
     {
-        
+        if (player1 == null || player2 == null) return;
+
+        MoveCamera();
+        AdjustZoom();
+    }
+
+    void MoveCamera()
+    {
+        // Ýki karakterin ortalama pozisyonunu hesapla
+        Vector2 midpoint = (player1.position + player2.position) / 2f;
+
+        // Kamerayý bu pozisyona yumuþakça hareket ettir
+        Vector2 newPosition = midpoint + offset;
+        transform.position = Vector3.SmoothDamp(transform.position, newPosition, ref velocity, smoothTime);
+    }
+
+    void AdjustZoom()
+    {
+        // Ýki karakter arasýndaki mesafeyi al
+        float distance = Vector3.Distance(player1.position, player2.position);
+
+        // Kameranýn zoom seviyesini mesafeye göre ayarla
+        float newZoom = Mathf.Lerp(maxZoom, minZoom, distance / zoomLimiter);
+        cam.orthographicSize = Mathf.Lerp(cam.orthographicSize, newZoom, Time.deltaTime);
     }
 }
