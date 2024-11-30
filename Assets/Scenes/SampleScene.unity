@@ -177,10 +177,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dragon (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 3677368081388786021, guid: 69c00ab078ec7e14fa0b17437c789b0b, type: 3}
-      propertyPath: haraket
-      value: Horizontal2
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

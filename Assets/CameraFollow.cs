@@ -8,7 +8,7 @@ public class CameraFollow : MonoBehaviour
     public float minZoom = 5f; // Minimum zoom
     public float maxZoom = 15f; // Maksimum zoom
     public float zoomLimiter = 10f; // Zoom hýzý
-    public Vector2 offset; // Kameranýn ofseti
+    public Vector3 offset; // Kameranýn ofseti
 
     private Vector3 velocity; // Kamera hýzý
     private Camera cam; // Kamera referansý
@@ -29,10 +29,14 @@ public class CameraFollow : MonoBehaviour
     void MoveCamera()
     {
         // Ýki karakterin ortalama pozisyonunu hesapla
-        Vector2 midpoint = (player1.position + player2.position) / 2f;
+        Vector3 midpoint = (player1.position + player2.position) / 2f;
 
         // Kamerayý bu pozisyona yumuþakça hareket ettir
-        Vector2 newPosition = midpoint + offset;
+        Vector3 newPosition = midpoint + offset;
+
+        // Z eksenini sabitle
+        newPosition.z = -10f; // Z deðeri her zaman 10 olacak
+
         transform.position = Vector3.SmoothDamp(transform.position, newPosition, ref velocity, smoothTime);
     }
 
