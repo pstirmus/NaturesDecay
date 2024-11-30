@@ -929,7 +929,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &931693477
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24514,6 +24514,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dragon (1)
       objectReference: {fileID: 0}
+<<<<<<< HEAD
+=======
     - target: {fileID: 6394383060817274292, guid: 131b05f65483b1f40a4d5d4db4cabe26, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 10.566162
@@ -24526,6 +24528,7 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0.34887695
       objectReference: {fileID: 0}
+>>>>>>> 849e70f68fcb108771c810a568558bce67a1e33c
     - target: {fileID: 8149445168958768618, guid: 131b05f65483b1f40a4d5d4db4cabe26, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -24799,6 +24802,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dragon
       objectReference: {fileID: 0}
+<<<<<<< HEAD
+=======
     - target: {fileID: 5539414584064339124, guid: 69c00ab078ec7e14fa0b17437c789b0b, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 10.566162
@@ -24807,6 +24812,7 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0.34283447
       objectReference: {fileID: 0}
+>>>>>>> 849e70f68fcb108771c810a568558bce67a1e33c
     - target: {fileID: 7312219071142137066, guid: 69c00ab078ec7e14fa0b17437c789b0b, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -24842,7 +24848,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3256039819142028611, guid: 1e0261a214c12af45bd09d0cf875ffb6, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6777803360752902649, guid: 1e0261a214c12af45bd09d0cf875ffb6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
