@@ -14,13 +14,13 @@ public class playercontroller : MonoBehaviour
     private SpriteRenderer sRenderer;
     Rigidbody2D rb;
     [SerializeField] float raydistance;
-    int yon;
+    float yon;
     [SerializeField] bool ciftzıplayabilir;
     bool isjump;
     skils skil;
     Anim anim;
     [SerializeField]string haraket;
-
+    [SerializeField] KeyCode JumpKey;
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -30,15 +30,32 @@ public class playercontroller : MonoBehaviour
         
     }
 
-    
+
     private void Update()
     {
+        jump();
         move();
         Playdash();
-        yonDegis();
-        jump();
-        
+        Yonkarar((int)Input.GetAxis(haraket));
+        yonDegis(); // Her zaman yön değişikliğine izin ver
+
+        if (!YerdeMi())
+        {
+            anim.Jump();
+        }
+        else
+        {
+            if (yon == 0) // Hareket etmiyorsa
+            {
+                anim.Idle();
+            }
+            else
+            {
+                anim.Walk();
+            }
+        }
     }
+
     public bool YerdeMi()
     {
         RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, raydistance, 1 << LayerMask.NameToLayer("zemin"));
@@ -52,15 +69,16 @@ public class playercontroller : MonoBehaviour
         }
         
     }
-    public void Yonkarar(int yon)
+    public void Yonkarar(float yon)
     {
         this.yon = yon;
     }
     public void jump()
     {
-        if (Input.GetKeyDown(KeyCode.W))
+        
+        if (Input.GetKeyDown(JumpKey))
         {
-            isjump = true;
+            
             if (ciftzıplayabilir == false)
             {
                 if (YerdeMi())
@@ -80,15 +98,12 @@ public class playercontroller : MonoBehaviour
     }
     void move()
     {
-        Yonkarar((int)Input.GetAxis(haraket));
         transform.Translate(yon * haraketHizi * Time.deltaTime, 0, 0);
     }
     void yonDegis()
     {
         if (yon != 0)
-        {
-            anim.Walk();
-
+        {  
             if (yon > 0)
             {
                 sRenderer.flipX = false;
@@ -97,11 +112,6 @@ public class playercontroller : MonoBehaviour
             {
                 sRenderer.flipX = true;
             }
-
-        }
-        else
-        {
-            anim.Idle();
         }
     }
     void Playdash()
@@ -111,4 +121,6 @@ public class playercontroller : MonoBehaviour
             skil.dash();
         }
     }
+    
+    
 }

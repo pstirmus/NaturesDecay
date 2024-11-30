@@ -21,4 +21,8 @@ public class Anim : MonoBehaviour
     {
         anim.Play("run");
     }
+    public void Jump()
+    {
+        anim.Play("Jump");
+    }
 }
