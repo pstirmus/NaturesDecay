@@ -281,8 +281,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44a614eb711e2394b831241e65a4ee90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pos1: {x: -11.08263, y: 0}
-  pos2: {x: -8.61, y: 0}
+  pos1: {x: 10.87056, y: 0}
+  pos2: {x: 16.61, y: 0}
   speed: 0.5
   Distance: 4
   attackDistance: 0.6
