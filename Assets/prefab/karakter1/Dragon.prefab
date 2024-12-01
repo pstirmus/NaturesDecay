@@ -25,8 +25,8 @@ Transform:
   m_GameObject: {fileID: 1103900373076666454}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.617, y: -0.62, z: 0}
-  m_LocalScale: {x: 1.1816835, y: 1.0573437, z: 1}
+  m_LocalPosition: {x: -0.01, y: -0.62, z: 0}
+  m_LocalScale: {x: 1.639586, y: 1.0573437, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1746696510323235946}
@@ -288,7 +288,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   atak: 0
   attackPoint: {fileID: 5265802077112281648}
-  attackRange: 0.5
+  attackRange: 1.16
   EnemyLayers:
     serializedVersion: 2
     m_Bits: 256
