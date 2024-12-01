@@ -28,4 +28,9 @@ public class GameManager : MonoBehaviour
             Time.timeScale = 0;
         }
     }
+    public void Win()
+    {
+        WinPanel.SetActive(true);
+        Time.timeScale = 0;
+    }
 }
