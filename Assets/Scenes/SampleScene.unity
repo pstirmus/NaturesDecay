@@ -829,18 +829,6 @@ PrefabInstance:
       propertyPath: plyer2
       value: 
       objectReference: {fileID: 1682331955}
-    - target: {fileID: 1614399566921711241, guid: b2bef0d96f7e3684a99a47b994eef62e, type: 3}
-      propertyPath: m_Size.x
-      value: 3.2218623
-      objectReference: {fileID: 0}
-    - target: {fileID: 1614399566921711241, guid: b2bef0d96f7e3684a99a47b994eef62e, type: 3}
-      propertyPath: m_Offset.x
-      value: -0.17284036
-      objectReference: {fileID: 0}
-    - target: {fileID: 1614399566921711241, guid: b2bef0d96f7e3684a99a47b994eef62e, type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7552498898776354895, guid: b2bef0d96f7e3684a99a47b994eef62e, type: 3}
       propertyPath: m_Name
       value: flagRed_0
