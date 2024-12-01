@@ -17,6 +17,7 @@ public class enemyHealt : MonoBehaviour
         else
         {
             can = 0;
+            anim.SetTrigger("hit");
             anim.SetBool("Dead", true);
         }
     }
