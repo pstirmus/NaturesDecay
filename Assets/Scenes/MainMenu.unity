@@ -498,7 +498,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1401410099
 RectTransform:
   m_ObjectHideFlags: 0
@@ -577,7 +577,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1401410100}
         m_TargetAssemblyTypeName: musicSettings, Assembly-CSharp
-        m_MethodName: "M\xFCzikBa\u015Flat"
+        m_MethodName: "M\xFCzikKapat"
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -715,7 +715,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4809794518541198052, guid: 1e0261a214c12af45bd09d0cf875ffb6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: "M\xFCzikKapat"
+      value: "M\xFCzikBa\u015Flat"
       objectReference: {fileID: 0}
     - target: {fileID: 4809794518541198052, guid: 1e0261a214c12af45bd09d0cf875ffb6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
@@ -764,6 +764,10 @@ PrefabInstance:
     - target: {fileID: 5232442421096387069, guid: 1e0261a214c12af45bd09d0cf875ffb6, type: 3}
       propertyPath: m_Name
       value: soundOff
+      objectReference: {fileID: 0}
+    - target: {fileID: 5232442421096387069, guid: 1e0261a214c12af45bd09d0cf875ffb6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6777803360752902649, guid: 1e0261a214c12af45bd09d0cf875ffb6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size

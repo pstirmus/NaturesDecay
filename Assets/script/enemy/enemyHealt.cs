@@ -16,9 +16,12 @@ public class enemyHealt : MonoBehaviour
         }
         else
         {
-            can = 0;
-            anim.SetTrigger("hit");
-            anim.SetBool("Dead", true);
+            if (!anim.GetBool("Dead"))
+            {
+                can = 0;
+                anim.SetTrigger("hit");
+                anim.SetBool("Dead", true);
+            }   
         }
     }
     void Dead()
