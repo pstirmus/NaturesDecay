@@ -6,6 +6,7 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D), typeof(BoxCollider2D))]
 [RequireComponent(typeof(skils), typeof(Anim))]
 [RequireComponent(typeof(PlayerAttack),typeof(PlayerHealt))]
+[RequireComponent(typeof(AudioSource))]
 public class playercontroller : MonoBehaviour
 {
     [SerializeField]
@@ -23,6 +24,8 @@ public class playercontroller : MonoBehaviour
     [SerializeField]string haraket;
     [SerializeField] KeyCode JumpKey,DashKey,Atk1;
     [SerializeField] PlayerAttack plyratck;
+    [SerializeField] AudioSource Ads;
+    [SerializeField] AudioClip saldırıS, jumpS, dashS;
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -30,6 +33,7 @@ public class playercontroller : MonoBehaviour
         skil = GetComponent<skils>();
         anim = GetComponent<Anim>();
         plyratck = GetComponent<PlayerAttack>();
+        Ads = GetComponent<AudioSource>();
         
     }
 
@@ -103,6 +107,7 @@ public class playercontroller : MonoBehaviour
                     Vector2 zıplamaVektor = new Vector2(0, 1) * ziplamaGucu;
                     rb.AddForce(zıplamaVektor);
                     ciftzıplayabilir = true;
+                    Ads.PlayOneShot(jumpS);
                 }
             }
             else if (ciftzıplayabilir == true)
@@ -110,6 +115,7 @@ public class playercontroller : MonoBehaviour
                 Vector2 zıplamaVektor = new Vector2(0, 1) * ziplamaGucu;
                 rb.AddForce(zıplamaVektor);
                 ciftzıplayabilir = false;
+                Ads.PlayOneShot(jumpS);
             }
         }
     }
@@ -136,6 +142,7 @@ public class playercontroller : MonoBehaviour
         if (Input.GetKeyDown(DashKey)&&skil.canDash)
         {
             skil.dash(anim);
+            Ads.PlayOneShot(dashS);
         }
     }
     void Attack()
@@ -143,6 +150,7 @@ public class playercontroller : MonoBehaviour
         if (Input.GetKeyDown(Atk1)&& !plyratck.atak)
         {
             plyratck.NormalAttack(anim);
+            Ads.PlayOneShot(saldırıS);
         }  
     }
     

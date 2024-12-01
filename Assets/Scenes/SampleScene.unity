@@ -473,14 +473,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Human
       objectReference: {fileID: 0}
-    - target: {fileID: 4786136901654682361, guid: 131b05f65483b1f40a4d5d4db4cabe26, type: 3}
-      propertyPath: attackRange
-      value: 1.07
-      objectReference: {fileID: 0}
-    - target: {fileID: 7165530563261096287, guid: 131b05f65483b1f40a4d5d4db4cabe26, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.03
-      objectReference: {fileID: 0}
     - target: {fileID: 8149445168958768618, guid: 131b05f65483b1f40a4d5d4db4cabe26, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
