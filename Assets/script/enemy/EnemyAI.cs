@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(AudioSource))]
 public class EnemyAI : MonoBehaviour
 {
     [SerializeField] Vector2 pos1, pos2;
@@ -20,9 +21,12 @@ public class EnemyAI : MonoBehaviour
     [SerializeField] float attackRange = 0.5f;
     float AttakPower = 25f;
     RaycastHit2D HitenemyAtck;
+    [SerializeField] AudioSource Ads;
+    [SerializeField] AudioClip saldýrýS;
     private void Awake()
     {
         anim = GetComponent<Animator>();
+        Ads = GetComponent<AudioSource>();
         Physics2D.queriesStartInColliders = false;
     }
     private void Update()
@@ -84,6 +88,7 @@ public class EnemyAI : MonoBehaviour
         if (HitenemyAtck.collider != null && HitenemyAtck.collider.gameObject == target.gameObject)
         {
             anim.SetBool("Attack", true);
+            
         }
         else
         {
@@ -97,5 +102,9 @@ public class EnemyAI : MonoBehaviour
         {
             enemy.gameObject.GetComponent<PlayerHealt>().Damage(AttakPower);
         }
+    }
+    public void AttackSes()
+    {
+        Ads.PlayOneShot(saldýrýS);
     }
 }

@@ -182,6 +182,7 @@ MonoBehaviour:
   "sald\u0131r\u0131S": {fileID: 8300000, guid: db7da89e852d20a4bbcae245aaac667c, type: 3}
   jumpS: {fileID: 8300000, guid: 91dbe1c4e1b88cb43bce4757b0bf13fe, type: 3}
   dashS: {fileID: 8300000, guid: 45a737f2a08c5324da43ff24e7d6229f, type: 3}
+  WalkS: {fileID: 8300000, guid: 50e28b309613bef41a0a5626e8b63b3f, type: 3}
 --- !u!114 &1389907741419057989
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -292,7 +293,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: db7da89e852d20a4bbcae245aaac667c, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1

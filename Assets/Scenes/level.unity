@@ -2942,10 +2942,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 5087227756537491892, guid: 131b05f65483b1f40a4d5d4db4cabe26, type: 3}
-      propertyPath: WalkS
-      value: 
-      objectReference: {fileID: 8300000, guid: 50e28b309613bef41a0a5626e8b63b3f, type: 3}
     - target: {fileID: 8149445168958768618, guid: 131b05f65483b1f40a4d5d4db4cabe26, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -2953,10 +2949,6 @@ PrefabInstance:
     - target: {fileID: 8149445168958768618, guid: 131b05f65483b1f40a4d5d4db4cabe26, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8491327685947459859, guid: 131b05f65483b1f40a4d5d4db4cabe26, type: 3}
-      propertyPath: m_SortingOrder
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9155675971158185549, guid: 131b05f65483b1f40a4d5d4db4cabe26, type: 3}
       propertyPath: m_LocalPosition.x
@@ -52151,16 +52143,12 @@ PrefabInstance:
       value: enemy
       objectReference: {fileID: 0}
     - target: {fileID: 8218337147378116138, guid: 2ad035ff3faaf9542ac54fb5dba642e0, type: 3}
-      propertyPath: pos2.x
-      value: -11.73
-      objectReference: {fileID: 0}
-    - target: {fileID: 8218337147378116138, guid: 2ad035ff3faaf9542ac54fb5dba642e0, type: 3}
       propertyPath: target
       value: 
       objectReference: {fileID: 1507990618}
     - target: {fileID: 9029088065440572892, guid: 2ad035ff3faaf9542ac54fb5dba642e0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -11.73
+      value: -11.53
       objectReference: {fileID: 0}
     - target: {fileID: 9029088065440572892, guid: 2ad035ff3faaf9542ac54fb5dba642e0, type: 3}
       propertyPath: m_LocalPosition.y
@@ -53334,10 +53322,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dragon
       objectReference: {fileID: 0}
-    - target: {fileID: 3677368081388786021, guid: 69c00ab078ec7e14fa0b17437c789b0b, type: 3}
-      propertyPath: WalkS
-      value: 
-      objectReference: {fileID: 8300000, guid: 50e28b309613bef41a0a5626e8b63b3f, type: 3}
     - target: {fileID: 7312219071142137066, guid: 69c00ab078ec7e14fa0b17437c789b0b, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
