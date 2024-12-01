@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-[RequireComponent(typeof(Rigidbody2D), typeof(PolygonCollider2D))]
+[RequireComponent(typeof(Rigidbody2D), typeof(BoxCollider2D))]
 [RequireComponent(typeof(skils), typeof(Anim))]
+[RequireComponent(typeof(PlayerAttack),typeof(PlayerHealt))]
 public class playercontroller : MonoBehaviour
 {
     [SerializeField]
@@ -20,41 +21,56 @@ public class playercontroller : MonoBehaviour
     skils skil;
     Anim anim;
     [SerializeField]string haraket;
-    [SerializeField] KeyCode JumpKey,DashKey;
-
+    [SerializeField] KeyCode JumpKey,DashKey,Atk1;
+    [SerializeField] PlayerAttack plyratck;
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         sRenderer = GetComponent<SpriteRenderer>();
         skil = GetComponent<skils>();
         anim = GetComponent<Anim>();
+        plyratck = GetComponent<PlayerAttack>();
         
     }
 
 
     private void Update()
     {
-        jump();
-        move();
-        Playdash();
-        Yonkarar((int)Input.GetAxis(haraket));
-        yonDegis(); // Her zaman yön değişikliğine izin ver
+        if (!GetComponent<PlayerHealt>().isHit)
+        {
+            Attack();
+            if (!plyratck.atak)
+            {
+                if (!skil.isDashing)
+                {
+                    if (!YerdeMi())
+                    {
+                        anim.Jump();
+                    }
+                    else
+                    {
 
-        if (!YerdeMi())
-        {
-            anim.Jump();
-        }
-        else
-        {
-            if (yon == 0) // Hareket etmiyorsa
-            {
-                anim.Idle();
+
+                        if (yon == 0)
+                        {
+                            anim.Idle();
+                        }
+                        else
+                        {
+                            anim.Walk();
+                        }
+
+                    }
+                }
+
+                jump();
+                move();
+                Playdash();
+                Yonkarar((int)Input.GetAxis(haraket));
+                yonDegis();
             }
-            else
-            {
-                anim.Walk();
-            }
         }
+        
     }
 
     public bool YerdeMi()
@@ -117,11 +133,17 @@ public class playercontroller : MonoBehaviour
     }
     void Playdash()
     {
-        if (Input.GetKeyDown(DashKey))
+        if (Input.GetKeyDown(DashKey)&&skil.canDash)
         {
-            skil.dash();
+            skil.dash(anim);
         }
     }
-    
+    void Attack()
+    {
+        if (Input.GetKeyDown(Atk1)&& !plyratck.atak)
+        {
+            plyratck.NormalAttack(anim);
+        }  
+    }
     
 }

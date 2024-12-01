@@ -26,17 +26,19 @@ public class skils : MonoBehaviour
     }
 
 
-    public void dash()
+    public void dash(Anim an)
     {
+        an.Dash();
         StartCoroutine(dashCorot());
     }
 
     IEnumerator dashCorot()
     {
-        Debug.Log("asd");
+        
         canDash = false;
         isDashing = true;
-        rb.gravityScale = 0;
+        rb.gravityScale = 0.2f;
+        rb.mass = 1f;
         if (!sRenderer.flipX)
         {
             rb.velocity = new Vector2(HorizontalMove * dashAmount, 1f);
@@ -49,6 +51,7 @@ public class skils : MonoBehaviour
         rb.velocity = new Vector2(0f, 0f);
         rb.gravityScale = 1f;
         isDashing = false;
+        rb.mass = 50f;
         yield return new WaitForSeconds(dashColdown);
         canDash = true;
         
