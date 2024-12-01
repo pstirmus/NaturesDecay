@@ -3,7 +3,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     [SerializeField]GameObject plyr1,plyr2;
-    [SerializeField] GameObject DeadPanel;
+    [SerializeField] GameObject DeadPanel,WinPanel;
 
     public bool isPaused;
 
