@@ -259,6 +259,7 @@ MonoBehaviour:
   "sald\u0131r\u0131S": {fileID: 8300000, guid: a78a81c833b385e44a1f5ee719f8779d, type: 3}
   jumpS: {fileID: 8300000, guid: 91dbe1c4e1b88cb43bce4757b0bf13fe, type: 3}
   dashS: {fileID: 8300000, guid: 45a737f2a08c5324da43ff24e7d6229f, type: 3}
+  WalkS: {fileID: 8300000, guid: 50e28b309613bef41a0a5626e8b63b3f, type: 3}
 --- !u!114 &8555879654475868848
 MonoBehaviour:
   m_ObjectHideFlags: 0
