@@ -69,14 +69,13 @@ public class EnemyAI : MonoBehaviour
             EnemyMove();
 
         }
+        EnemyAttackAI();
     }
 
     void EnemyFollow()
     {
         Vector2 targetPosition = new Vector2(target.position.x+ 0.7f, transform.position.y);
         transform.position = Vector2.MoveTowards(transform.position, targetPosition, 1 * Time.deltaTime);
-
-        EnemyAttackAI();
     }
     void EnemyAttackAI()
     {
