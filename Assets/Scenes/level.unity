@@ -154,7 +154,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.37625003, y: 0.5177778}
   m_AnchorMax: {x: 0.57875, y: 0.6311112}
-  m_AnchoredPosition: {x: 13.7, y: -0.5}
+  m_AnchoredPosition: {x: 13.700012, y: -0.5}
   m_SizeDelta: {x: -23.0718, y: -1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &24184820
@@ -2946,6 +2946,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 5087227756537491892, guid: 131b05f65483b1f40a4d5d4db4cabe26, type: 3}
+      propertyPath: WalkS
+      value: 
+      objectReference: {fileID: 8300000, guid: 50e28b309613bef41a0a5626e8b63b3f, type: 3}
     - target: {fileID: 8149445168958768618, guid: 131b05f65483b1f40a4d5d4db4cabe26, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -53364,6 +53368,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dragon
       objectReference: {fileID: 0}
+    - target: {fileID: 3677368081388786021, guid: 69c00ab078ec7e14fa0b17437c789b0b, type: 3}
+      propertyPath: WalkS
+      value: 
+      objectReference: {fileID: 8300000, guid: 50e28b309613bef41a0a5626e8b63b3f, type: 3}
     - target: {fileID: 7312219071142137066, guid: 69c00ab078ec7e14fa0b17437c789b0b, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
