@@ -2,21 +2,30 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    // Singleton örneği
-    public static GameManager Instance;
-    public bool isPaused = false; // Oyunun paused (duraklatılmış) durumu
+    [SerializeField]GameObject plyr1,plyr2;
+    [SerializeField] GameObject DeadPanel;
 
-    // Bu fonksiyon, sahne geçişi esnasında verilerin kaybolmaması için kullanılır
-    void Awake()
+    public bool isPaused;
+
+    public static GameManager Instance=null;
+    private void Awake()
     {
+        Time.timeScale = 1;
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject); // Bu GameManager objesi sahne değişse bile yok olmayacak
         }
         else
         {
-            Destroy(gameObject); // Eğer zaten bir örneği varsa, bu objeyi sil
+            Destroy(gameObject);
+        }
+    }
+    private void Update()
+    {
+        if (plyr1.GetComponent<PlayerHealt>().currentHealth < 1 || plyr2.GetComponent<PlayerHealt>().currentHealth < 1)
+        {
+            DeadPanel.SetActive(true);
+            Time.timeScale = 0;
         }
     }
 }

@@ -31,16 +31,18 @@ public class MutasyonHealth : MonoBehaviour,IDamageble
         {
             newFloatValue = 0;
 
-            GetComponent<BoxCollider>().enabled = false;
+            GetComponent<BoxCollider2D>().enabled = false;
         }
         material.SetFloat("_DirtAmount", newFloatValue);
     }
-    private void OnTriggerEnter(Collider other)
+
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (other.gameObject.tag == "Player")
+        
+        if (collision.gameObject.tag == "Player")
         {
             Debug.Log("asd");
-            other.gameObject.GetComponent<PlayerHealt>().Damage(100);
+            collision.gameObject.GetComponent<PlayerHealt>().Damage(100);
         }
     }
 

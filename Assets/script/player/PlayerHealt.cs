@@ -7,7 +7,7 @@ public class PlayerHealt : MonoBehaviour, IDamageble
 {
     [SerializeField] private Slider healthSlider; 
     [SerializeField] private float maxHealth = 100f; 
-    private float currentHealth; 
+    public float currentHealth; 
     Anim anim;
     public bool isHit;
     private void Awake()
