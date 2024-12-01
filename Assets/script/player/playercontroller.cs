@@ -25,7 +25,7 @@ public class playercontroller : MonoBehaviour
     [SerializeField] KeyCode JumpKey,DashKey,Atk1;
     [SerializeField] PlayerAttack plyratck;
     [SerializeField] AudioSource Ads;
-    [SerializeField] AudioClip saldırıS, jumpS, dashS;
+    [SerializeField] AudioClip saldırıS, jumpS, dashS,WalkS;
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -72,6 +72,7 @@ public class playercontroller : MonoBehaviour
                 Playdash();
                 Yonkarar((int)Input.GetAxis(haraket));
                 yonDegis();
+                
             }
         }
         
@@ -153,5 +154,8 @@ public class playercontroller : MonoBehaviour
             Ads.PlayOneShot(saldırıS);
         }  
     }
-    
+    public void WalkSes()
+    {
+        Ads.PlayOneShot(WalkS);
+    }
 }
